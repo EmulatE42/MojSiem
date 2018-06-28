@@ -47,6 +47,17 @@ public class UserController
     @Autowired
     TokenUtils tokenUtils;
 
+
+
+    @GetMapping("/")
+    public String index() {
+        return "Hello there! I'm running.";
+    }
+    @GetMapping("/favicon.ico")
+    public String index2() {
+        return "Hello there! I'm running.";
+    }
+
     @RequestMapping(value = "/api/login", method = RequestMethod.POST)
     public ResponseEntity<?> login(@RequestBody LoginRequestDTO loginDTO) {
         try {
